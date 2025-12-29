@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5. Sınıf Din Kültürü - Tam Kapsamlı Eğitim Portalı</title>
+    <title>5. Sınıf Din Kültürü Hazırlık</title>
     <style>
         :root { --primary: #27ae60; --secondary: #2c3e50; --accent: #3498db; --bg: #f4f7f6; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg); color: #333; }
@@ -21,6 +21,10 @@
         .page { display: none; padding: 30px; max-width: 1100px; margin: auto; background: white; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
         .header-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--secondary); padding-bottom: 15px; margin-bottom: 30px; position: sticky; top: 0; background: white; z-index: 100; }
         .back-btn { padding: 12px 25px; background: var(--secondary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        
+        /* PDF İNDİR BUTONU STİLİ */
+        .download-btn { padding: 12px 25px; background: #e74c3c; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; margin-right: 10px; font-size: 14px; }
+        .download-btn:hover { background: #c0392b; }
 
         /* DERS NOTLARI STİLİ */
         .study-content h2 { color: white; background: var(--secondary); padding: 15px; border-radius: 8px; margin-top: 40px; }
@@ -47,7 +51,7 @@
 <body>
 
 <div id="main-menu">
-    <div class="menu-title">5. SINIF DİN KÜLTÜRÜ VE AHLAK BİLGİSİ<br>EKSİKSİZ ÇALIŞMA VE SINAV SİSTEMİ</div>
+    <div class="menu-title">5.SINIF I-DONEM II.SINAV DİN KÜLTÜRÜ <br>ÇALIŞMA VE SINAV </div>
     <div class="nav-buttons">
         <button class="big-btn study-btn" onclick="openPage('study-page')"><span>📖</span>Tüm Notları Oku</button>
         <button class="big-btn exam-btn" onclick="openPage('exam-page')"><span>📝</span>Sınava Gir</button>
@@ -55,7 +59,13 @@
 </div>
 
 <div id="study-page" class="page">
-    <div class="header-bar"><h2>📖 Kapsamlı Çalışma Notları</h2><button class="back-btn" onclick="goBack()">🏠 Ana Menü</button></div>
+    <div class="header-bar">
+        <h2>📖 Çalışma Notları</h2>
+        <div>
+            <a href="CalismaNotlari_din.pdf" download="CalismaNotlari_din.pdf" class="download-btn">Notları PDF İndir 📥</a>
+            <button class="back-btn" onclick="goBack()">🏠 Ana Menü</button>
+        </div>
+    </div>
     
     <div class="study-content">
         <div class="note-box">
