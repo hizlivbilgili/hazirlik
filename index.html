@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Sınıf Din Kültürü - Tam Kapsamlı Eğitim Portalı</title>
+    <style>
+        :root { --primary: #27ae60; --secondary: #2c3e50; --accent: #3498db; --bg: #f4f7f6; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--bg); color: #333; }
+        
+        /* GİRİŞ EKRANI */
+        #main-menu { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 30px; background: linear-gradient(135deg, #2c3e50, #34495e); color: white; }
+        .menu-title { font-size: 36px; font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .nav-buttons { display: flex; gap: 40px; }
+        .big-btn { width: 280px; height: 200px; font-size: 24px; font-weight: bold; cursor: pointer; border: none; border-radius: 25px; transition: 0.3s; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .study-btn { background-color: var(--accent); }
+        .exam-btn { background-color: var(--primary); }
+        .big-btn:hover { transform: translateY(-10px); }
+
+        /* SAYFA YAPISI */
+        .page { display: none; padding: 30px; max-width: 1100px; margin: auto; background: white; min-height: 100vh; box-shadow: 0 0 30px rgba(0,0,0,0.1); }
+        .header-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--secondary); padding-bottom: 15px; margin-bottom: 30px; position: sticky; top: 0; background: white; z-index: 100; }
+        .back-btn { padding: 12px 25px; background: var(--secondary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+        /* DERS NOTLARI STİLİ */
+        .study-content h2 { color: white; background: var(--secondary); padding: 15px; border-radius: 8px; margin-top: 40px; }
+        .study-content h3 { color: var(--accent); border-left: 6px solid var(--accent); padding-left: 15px; margin-top: 25px; background: #f0f7ff; padding-top: 10px; padding-bottom: 10px; }
+        .note-box { border: 1px solid #eee; padding: 25px; border-radius: 12px; margin-bottom: 25px; line-height: 1.8; background: #fff; }
+        .hl { color: #e67e22; font-weight: bold; }
+        .verse-box { background: #fff9e6; border-right: 5px solid #f1c40f; padding: 20px; font-style: italic; margin: 20px 0; border-radius: 8px; border-left: 5px solid #f1c40f; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        table, th, td { border: 2px solid #dee2e6; padding: 15px; text-align: center; }
+        th { background-color: #f8f9fa; }
+
+        /* SINAV STİLİ */
+        .question-box { margin-bottom: 30px; padding: 25px; border: 2px solid #eee; border-radius: 12px; position: relative; }
+        .correct-box { border-color: var(--primary) !important; background-color: #f1fcf4 !important; }
+        .wrong-box { border-color: #e74c3c !important; background-color: #fdf2f2 !important; }
+        .status-icon { position: absolute; top: 15px; right: 25px; font-size: 28px; }
+        label { display: block; padding: 12px; cursor: pointer; border-radius: 8px; }
+        .feedback-text { display: none; margin-top: 15px; padding: 12px; border-radius: 6px; background: #fff3cd; color: #856404; font-weight: bold; border-left: 6px solid #ffeeba; }
+        #submit-btn { width: 100%; padding: 25px; background: var(--primary); color: white; border: none; border-radius: 12px; font-size: 22px; font-weight: bold; cursor: pointer; }
+        #result-summary { display: none; margin-top: 40px; padding: 30px; border: 4px dashed var(--primary); text-align: center; }
+    </style>
+</head>
+<body>
+
+<div id="main-menu">
+    <div class="menu-title">5. SINIF DİN KÜLTÜRÜ VE AHLAK BİLGİSİ<br>EKSİKSİZ ÇALIŞMA VE SINAV SİSTEMİ</div>
+    <div class="nav-buttons">
+        <button class="big-btn study-btn" onclick="openPage('study-page')"><span>📖</span>Tüm Notları Oku</button>
+        <button class="big-btn exam-btn" onclick="openPage('exam-page')"><span>📝</span>Sınava Gir</button>
+    </div>
+</div>
+
+<div id="study-page" class="page">
+    <div class="header-bar"><h2>📖 Kapsamlı Çalışma Notları</h2><button class="back-btn" onclick="goBack()">🏠 Ana Menü</button></div>
+    
+    <div class="study-content">
+        <div class="note-box">
+            <h2>1. ÜNİTE: ALLAH İNANCI</h2>
+            <h3>Allah'ın Sıfatları ve Anlamları</h3>
+            <ul>
+                <li><span class="hl">İlim:</span> Allah'ın her şeyi bilmesidir. Gizli, açık, olmuş veya olacak her şeyi bilir.</li>
+                <li><span class="hl">Semi:</span> Allah'ın her şeyi işitmesidir. Dualarımızı ve fısıltıları bile duyar.</li>
+                <li><span class="hl">Basar:</span> Allah'ın her şeyi görmesidir. Karanlıkta siyah karıncayı bile görür, göze muhtaç değildir.</li>
+                <li><span class="hl">Kudret:</span> Allah'ın her şeye gücünün yetmesidir. Sonsuz güç sahibidir.</li>
+                <li><span class="hl">Tekvin:</span> Allah'ın yoktan var etmesi, yaratmasıdır.</li>
+                <li><span class="hl">Vahdaniyet:</span> Allah'ın bir ve tek olması, eşi benzeri olmamasıdır.</li>
+            </ul>
+
+            <h3>Allah'ın Güzel İsimleri (Esmâü'l-Hüsna)</h3>
+            <p><strong>Rahman:</strong> Dünyada tüm canlılara merhamet eden, rızık veren.</p>
+            <p><strong>Rahim:</strong> Ahirette sadece müminlere şefkat ve merhamet eden.</p>
+            <p><strong>El-Kadir:</strong> Sonsuz kudret sahibi olan Allah.</p>
+            <p><strong>Tevhid:</strong> Allah’ı birlemek, O’nun bir ve tek olduğuna inanmaktır.</p>
+            <p><strong>Hanif:</strong> Hz. İbrahim'in tebliğ ettiği, Allah'ın birliği esasına dayanan dine inananlar.</p>
+
+            <h3>İhlas Suresi Meali</h3>
+            <div class="verse-box">
+                "De ki: O Allah tektir. Allah Samed'dir (Her şey O'na muhtaçtır, O hiçbir şeye muhtaç değildir). O doğurmamış ve doğurulmamıştır. O'nun hiçbir dengi yoktur."
+            </div>
+        </div>
+
+        <div class="note-box">
+            <h2>2. ÜNİTE: NAMAZ VE TEMİZLİK</h2>
+            <h3>Abdestin Farzları (4 Tane)</h3>
+            <p>1. Yüzü yıkamak. 2. Kolları dirseklerle beraber yıkamak. 3. Başın dörtte birini meshetmek. 4. Ayakları topuklarla beraber yıkamak.</p>
+            
+            <h3>Gusül Abdesti Farzları (3 Tane)</h3>
+            <p>1. Ağza su vermek. 2. Burna su vermek. 3. Tüm vücudu kuru yer kalmayacak şekilde yıkamak.</p>
+
+            <h3>Namazın Rükünleri (Farzları)</h3>
+            <ul>
+                <li><strong>İftitah Tekbiri:</strong> Namaza başlarken "Allahu Ekber" demek.</li>
+                <li><strong>Kıyam:</strong> Namazda ayakta durmak.</li>
+                <li><strong>Kıraat:</strong> Ayaktayken Kur'an okumak.</li>
+                <li><strong>Rükû:</strong> Eğilip elleri dizlere koymak.</li>
+                <li><strong>Secde:</strong> Yere kapanmak (Alın, burun, eller, dizler yere değer).</li>
+                <li><strong>Ka'de-i Ahîre:</strong> Namaz sonunda "Ettehiyyâtü" okuyacak kadar oturmak.</li>
+            </ul>
+
+            <h3>Namaz Rekatları Tablosu</h3>
+            <table>
+                <tr><th>Vakit</th><th>Sünnet</th><th>Farz</th><th>Son Sünnet</th><th>Vitir</th><th>Toplam</th></tr>
+                <tr><td>Sabah</td><td>2</td><td>2</td><td>-</td><td>-</td><td>4</td></tr>
+                <tr><td>Öğle</td><td>4</td><td>4</td><td>2</td><td>-</td><td>10</td></tr>
+                <tr><td>İkindi</td><td>4</td><td>4</td><td>-</td><td>-</td><td>8</td></tr>
+                <tr><td>Akşam</td><td>-</td><td>3</td><td>2</td><td>-</td><td>5</td></tr>
+                <tr><td>Yatsı</td><td>4</td><td>4</td><td>2</td><td>3</td><td>13</td></tr>
+            </table>
+
+            <h3>Önemli Bilgiler</h3>
+            <p><strong>Cuma Namazı:</strong> Akıllı, ergen, hür ve sağlıklı erkeklere haftada bir kez farzdır. Cemaatle kılınır ve hutbe okunur.</p>
+            <p><strong>Cenaze Namazı:</strong> Ayakta kılınır, rükû ve secdesi yoktur. Farz-ı Kifayedir.</p>
+            <p><strong>Ankebût Suresi 45. Ayet:</strong> "Namaz insanı çirkinlikten ve kötülükten alıkoyar."</p>
+            <p><strong>Namazın Faydaları:</strong> İnsanı disipline eder, zamanı yönetmeyi öğretir, temizliğe alıştırır ve manevi huzur verir.</p>
+        </div>
+    </div>
+</div>
+
+<div id="exam-page" class="page">
+    <div class="header-bar"><h2>📝 Akıllı Final Sınavı</h2><button class="back-btn" onclick="goBack()">🏠 Ana Menü</button></div>
+    <form id="quizForm"><div id="questions-container"></div><button type="button" id="submit-btn" onclick="processExam()">SINAVI BİTİR</button></form>
+    <div id="result-summary"></div>
+</div>
+
+<script>
+    function openPage(p) { document.getElementById('main-menu').style.display='none'; document.querySelectorAll('.page').forEach(pg=>pg.style.display='none'); document.getElementById(p).style.display='block'; if(p==='exam-page') loadQuestions(); window.scrollTo(0,0); }
+    function goBack() { document.getElementById('main-menu').style.display='flex'; document.querySelectorAll('.page').forEach(pg=>pg.style.display='none'); }
+
+    const qData = [
+        { q: "Sütçü kızın 'Allah bizi görüyor' demesi hangi sıfattır?", o: ["Semi", "Basar", "İlim"], k: "B" },
+        { q: "Allah'ın her şeyi bilmesi anlamına gelen sıfat hangisidir?", o: ["İlim", "Kudret", "Tekvin"], k: "A" },
+        { q: "Allah'ın her şeye gücünün yetmesi anlamına gelen ismi?", o: ["Tekvin", "El-Kadir", "El-Basir"], k: "B" },
+        { q: "Ahirette sadece müminlere merhamet eden isim hangisidir?", o: ["Rahman", "Rahim", "Tevhid"], k: "B" },
+        { q: "Hz. İbrahim'in dininden olan ve tek Allah'a inananlara ne denir?", o: ["Mümin", "Hanif", "Muhlis"], k: "B" },
+        { q: "Abdestin farzları kaç tanedir?", o: ["3", "4", "6"], k: "B" },
+        { q: "Suyun olmadığı yerde toprakla alınan abdest hangisidir?", o: ["Gusül", "Teyemmüm", "Boy Abdesti"], k: "B" },
+        { q: "Namazda Kâbe'ye (Kıbleye) yönelmeye ne ad verilir?", o: ["İstikbal-i Kıble", "Niyet", "İftitah Tekbiri"], k: "A" },
+        { q: "Gusül abdestinin farzları hangileridir?", o: ["Niyet ve Mesh", "Yüz ve Eller", "Ağız, Burun, Tüm Vücut"], k: "C" },
+        { q: "Namazda örtülmesi gereken yerlerin örtülmesine ne denir?", o: ["Vakit", "Kıyam", "Setr-i Avret"], k: "C" },
+        { q: "Akşam namazının farzı kaç rekattır?", o: ["2", "3", "4"], k: "B" },
+        { q: "Namazda eller dizlere gelecek şekilde öne eğilmeye ne denir?", o: ["Rükû", "Secde", "Kıyam"], k: "A" },
+        { q: "Vitir namazının sonunda okunan özel dualar hangisidir?", o: ["Salli-Barik", "Kunut", "Rabbena"], k: "B" },
+        { q: "Rükû ve secdesi olmayan, ayakta kılınan namaz hangisidir?", o: ["Cuma", "Bayram", "Cenaze"], k: "C" },
+        { q: "İhlas suresindeki 'Samed' kelimesinin anlamı nedir?", o: ["Allah birdir", "Hiçbir şeye muhtaç değildir", "Doğurmamıştır"], k: "B" },
+        { q: "Yatsı namazı vitir dahil toplam kaç rekattır?", o: ["10", "13", "8"], k: "B" },
+        { q: "Allah'ın yoktan yaratması anlamına gelen sıfat hangisidir?", o: ["Tekvin", "Kudret", "Vahdaniyet"], k: "A" },
+        { q: "Cemaatle namaz kılmanın Müslümanlara sosyal katkısı nedir?", o: ["Zenginlik", "Birlik ve Beraberlik", "Yorgunluk"], k: "B" },
+        { q: "Namazın son oturuşunda okunan ilk dua hangisidir?", o: ["Ettehiyyâtü", "Salli-Barik", "Fatiha"], k: "A" },
+        { q: "Namazda ayaktayken Kur'an okumaya ne ad verilir?", o: ["Kıyam", "Kıraat", "Ka'de"], k: "B" },
+        { q: "Allah'ın her şeyi işitmesi sıfatı hangisidir?", o: ["Semi", "Basar", "İlim"], k: "A" },
+        { q: "Görünen pislikleri (beden, elbise) temizlemeye ne denir?", o: ["Hadesten Taharet", "Necasetten Taharet", "Setr-i Avret"], k: "B" },
+        { q: "Allah'ın bir ve tek olmasına ne ad verilir?", o: ["Vahdaniyet", "Tekvin", "Basar"], k: "A" },
+        { q: "Namazda yere kapanıp alın ve burnu yere koymaya ne denir?", o: ["Rükû", "Secde", "Kıyam"], k: "B" },
+        { q: "Ankebût 45. ayete göre namaz insanı neden alıkoyar?", o: ["Çalışmaktan", "Çirkinlik ve kötülükten", "Uyumaktan"], k: "B" },
+        { q: "Namazın 'dinin direği' olmasının temel sebebi nedir?", o: ["Temel ibadet olması", "Kısa sürmesi", "Sadece camide kılınması"], k: "A" },
+        { q: "Besmele ne zaman çekilir?", o: ["Yemeğe başlarken", "Hayırlı işlere başlarken", "Hepsi"], k: "C" },
+        { q: "Allah'ın dünyada herkese nimet vermesi hangi ismidir?", o: ["Rahim", "Kadir", "Rahman"], k: "C" },
+        { q: "İhlas suresindeki 'Ehad' ne demektir?", o: ["Büyük olan", "Bir ve Tek olan", "Yaratan"], k: "B" },
+        { q: "Ramazan ayında yatsıdan sonra kılınan sünnet namaz hangisidir?", o: ["Cuma", "Teravih", "Cenaze"], k: "B" }
+    ];
+
+    function loadQuestions() {
+        const cont = document.getElementById('questions-container');
+        cont.innerHTML = "";
+        qData.forEach((item, idx) => {
+            const i = idx + 1;
+            cont.innerHTML += `
+                <div class="question-box" id="box-q${i}">
+                    <span class="status-icon" id="icon-q${i}"></span>
+                    <span class="q-text"><b>${i}.</b> ${item.q}</span>
+                    ${item.o.map((opt, oIdx) => `
+                        <label><input type="radio" name="q${i}" value="${String.fromCharCode(65+oIdx)}"> ${String.fromCharCode(65+oIdx)}) ${opt}</label>
+                    `).join('')}
+                    <div class="feedback-text" id="feed-q${i}"></div>
+                </div>
+            `;
+        });
+    }
+
+    function processExam() {
+        let score = 0; let unanswered = [];
+        for(let i=1; i<=30; i++) { if(!document.querySelector(`input[name="q${i}"]:checked`)) unanswered.push(i); }
+        if(unanswered.length > 0) { alert("⚠️ Boş soruların var! Lütfen şu soruları cevapla: " + unanswered.join(", ")); return; }
+
+        qData.forEach((item, idx) => {
+            let i = idx + 1;
+            let userVal = document.querySelector(`input[name="q${i}"]:checked`).value;
+            let box = document.getElementById('box-q'+i);
+            let icon = document.getElementById('icon-q'+i);
+            let feed = document.getElementById('feed-q'+i);
+
+            let correctText = item.o[item.k.charCodeAt(0) - 65];
+
+            if(userVal === item.k) {
+                score++; box.className = "question-box correct-box";
+                icon.innerHTML = "✔"; icon.style.color = "green";
+                feed.style.display = "none";
+            } else {
+                box.className = "question-box wrong-box";
+                icon.innerHTML = "✘"; icon.style.color = "red";
+                feed.style.display = "block";
+                feed.innerHTML = `❌ Yanlış Cevap! Doğru şık: ${item.k}) ${correctText}`;
+            }
+        });
+
+        const res = document.getElementById('result-summary');
+        res.style.display = "block";
+        res.innerHTML = `<h2>SINAV SONUCU</h2><p style="font-size:24px;">Doğru: ${score} | Yanlış: ${30-score}</p><p>Başarı Yüzdesi: %${Math.round((score/30)*100)}</p>`;
+        document.getElementById('submit-btn').style.display = "none";
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+</body>
+</html>
